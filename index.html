@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Title & Description -->
+    <title>Ahmed Talaat | Portfolio</title>
+    <meta name="description" content="I'm a Full Stack Developer specializing in building modern web applications using React, Next.js, and Node.js." />
+    <meta name="keywords" content="Portfolio, Web Developer, Front-End, Back-End, Full Stack, JavaScript, React, Next.js, Node.js, Express.js, MySQL, MongoDB" />
+    <meta name="author" content="Ahmed Talaat" />
+
+    <!-- Open Graph (for social media) -->
+    <meta property="og:title" content="Ahmed Talaat | Portfolio" />
+    <meta property="og:description" content="Explore my projects, skills, and experience in modern web development." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ahmedtalaat.com" />
+    <meta property="og:image" content="https://ahmedtalaat.com/mediamedia/logo.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ahmed Talaat | Portfolio" />
+    <meta name="twitter:description" content="Explore my projects and skills as a full stack developer." />
+    <meta name="twitter:image" content="https://ahmedtalaat.com/mediamedia/logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/mediamedia/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/mediamedia/logo.png" />
+    <link rel="apple-touch-icon" href="/mediamedia/logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts (مثال: Inter من Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+    <!-- SEO & Accessibility Enhancements -->
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ahmedtalaat.com" />
+  </head>
+  <body class="edge-gradient text-gray-200 font-inter">
+    <!-- Container -->
+    <div class="min-h-screen container mx-auto max-w-7xl p-5">
+      <!--!------------------------ NAV ------------------------!-->
+      <header class="flex items-center justify-between py-4">
+        <a href="#" class="flex items-center gap-3">
+          <img src="media/logo.png" alt="Ahmed Talaat" class="w-10 h-10 rounded-md object-cover" />
+          <span class="text-white font-semibold">Ahmed Talaat</span>
+        </a>
+        <nav class="hidden md:flex gap-6 text-sm">
+          <a href="#home" class="hover:underline">Home</a>
+          <a href="#about" class="hover:underline">About</a>
+          <a href="#skills" class="hover:underline">Skills</a>
+          <a href="#projects" class="hover:underline">Projects</a>
+          <a href="#contact" class="hover:underline">Contact</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="menuBtn" aria-label="menu" class="p-2 rounded-md bg-white/5">☰</button>
+        </div>
+      </header>
+
+      <!--!------------------------ HERO ------------------------!-->
+      <section id="home" class="grid lg:grid-cols-2 gap-10 items-center py-12">
+        <div class="space-y-6">
+          <p class="text-cyan-600 text-sm font-medium animate-fadeUp">&lt;Welcome to my portfolio&gt;</p>
+          <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight animate-fadeUp" style="animation-delay: 0.05s">
+            I'm <span class="text-cyan-400">Ahmed Talaat</span><br />
+            Software Engineer &amp; Fullstack Developer
+          </h1>
+          <p class="max-w-xl text-gray-300 animate-fadeUp" style="animation-delay: 0.1s">I build clean, fast and accessible web experiences. I love Tailwind, modern JS and smooth interactions.</p>
+          <div class="flex gap-4 mt-4 animate-fadeUp" style="animation-delay: 0.15s">
+            <a href="#contact" class="px-5 py-2 rounded-full bg-cyan-400 hover:shadow-all-lg shadow-cyan-400 text-black font-semibold duration-200">Contact</a>
+            <a href="/Ahmed Talaat_CV.pdf" class="px-5 py-2 rounded-full border border-white/10">Download CV</a>
+          </div>
+
+          <div class="mt-6 flex gap-4 text-gray-400 animate-fadeUp" style="animation-delay: 0.18s">
+            <a href="#" aria-label="github" class="hover:text-white">GitHub</a>
+            <a href="#" aria-label="linkedin" class="hover:text-white">LinkedIn</a>
+            <a href="#" aria-label="twitter" class="hover:text-white">Twitter</a>
+          </div>
+        </div>
+
+        <!-- right: code preview / image -->
+        <div class="relative max-w-2xl">
+          <div class="bg-gray-600/10 rounded-xl p-2.5 md:p-5 shadow-lg animate-fadeUp delay-200">
+            <div class="flex gap-2 items-center mb-4">
+              <span class="w-3 h-3 rounded-full bg-red-500"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+              <span class="w-3 h-3 rounded-full bg-green-400"></span>
+              <div class="ml-auto text-xs text-gray-400">about-me.js</div>
+            </div>
+            <!-- code -->
+            <code class="bg-transparent text-[clamp(10px,2vw,16px)] font-mono text-gray-200 flex flex-col gap-0.5">
+              <span class="whitespace-nowrap"><span class="text-green-500">1|</span> <span class="text-cyan-400">const</span> about = {</span>
+              <span class="whitespace-nowrap"><span class="text-green-500">2|</span> &nbsp;&nbsp;<span class="text-cyan-300">name</span>: <span class="text-amber-300">"Ahmed Talaat"</span>,</span>
+              <span class="whitespace-nowrap"><span class="text-green-500">3|</span> &nbsp;&nbsp;<span class="text-cyan-300">roles</span>: [ <span class="text-amber-300">"Software Engineer"</span>, <span class="text-amber-300">"Fullstack"</span>,</span>
+              <span class="whitespace-nowrap"><span class="text-green-500">4|</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-amber-300">"Front-End"</span>, <span class="text-amber-300">"Back-End"</span> ],</span>
+              <span class="whitespace-nowrap"><span class="text-green-500">5|</span> &nbsp;&nbsp;<span class="text-cyan-300">stack</span>: [ <span class="text-amber-300">"HTML"</span>, <span class="text-amber-300">"Tailwind"</span>, <span class="text-amber-300">"JS"</span>,</span>
+              <span class="whitespace-nowrap"><span class="text-green-500">6|</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-amber-300">"React"</span>, <span class="text-amber-300">"Node"</span> ]</span>
+              <span class="whitespace-nowrap"><span class="text-green-500">7|</span> };</span>
+              <span class="whitespace-nowrap"><span class="text-green-500">8|</span></span>
+              <span class="whitespace-nowrap"><span class="text-green-500">9|</span> console.<span class="text-cyan-400">log</span>(<span class="text-amber-300">"Hello World"</span>);</span>
+            </code>
+          </div>
+          <img src="media/logo.png" alt="hero preview" class="absolute -right-8 -bottom-8 w-32 h-32 rounded-md rotate-6 shadow-2xl hidden md:block" />
+        </div>
+      </section>
+
+
+      <!--!------------------------ ABOUT ------------------------!-->
+      <section id="about" class="mt-12 py-10">
+        <h2 class="text-3xl text-white font-semibold mt-2">&lt;/About Me&gt;</h2>
+        <div class="mt-6 grid md:grid-cols-3 gap-6 items-start">
+          <div class="md:col-span-2 bg-gray-600/10 rounded-xl p-6 animate-fadeUp">
+            <p class="text-gray-300">I'm a motivated developer building modern interfaces and small backend services. I focus on performance, accessibility, and pleasant UX. I enjoy solving problems and turning ideas into production-ready apps.</p>
+
+            <ul class="mt-6 grid grid-cols-2 gap-2 text-sm text-gray-400">
+              <li>• Front End Development</li>
+              <li>• Back End Development</li>
+              <li>• Responsive Design</li>
+              <li>• Problem Solving</li>
+            </ul>
+          </div>
+
+          <div class="bg-gradient-to-tr from-transparent to-white/5 rounded-xl p-4 flex items-center justify-center animate-fadeUp">
+            <img src="media/logo.png" alt="Ahmed Talaat" class="w-36 h-36 rounded-md object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <!--!------------------------ SKILLS ------------------------!-->
+      <section id="skills" class="mt-12 py-10">
+        <h3 class="text-cyan-600 text-sm">&lt;Skills&gt;</h3>
+        <h2 class="text-3xl text-white font-semibold mt-2">Skills & Proficiencies</h2>
+
+        <div class="mt-6 grid md:grid-cols-3 gap-6">
+          <!-- progress blocks -->
+          <div class="bg-orange-800/10 rounded-xl p-5 animate-fadeUp">
+            <div class="flex items-center justify-between mb-3">
+              <div class="text-sm text-gray-300">HTML / Tailwind</div>
+              <div class="text-xs text-gray-400">70%</div>
+            </div>
+            <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+              <div class="h-2 rounded-full" style="width: 70%; background: linear-gradient(90deg, #d44b06, #f87b38)"></div>
+            </div>
+          </div>
+
+          <div class="bg-yellow-800/10 rounded-xl p-5 animate-fadeUp">
+            <div class="flex items-center justify-between mb-3">
+              <div class="text-sm text-gray-300">JavaScript</div>
+              <div class="text-xs text-gray-400">80%</div>
+            </div>
+            <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+              <div class="h-2 rounded-full" style="width: 80%; background: linear-gradient(90deg, #d4bc06, #f8e238)"></div>
+            </div>
+          </div>
+
+          <div class="bg-green-800/10 rounded-xl p-5 animate-fadeUp">
+            <div class="flex items-center justify-between mb-3">
+              <div class="text-sm text-gray-300">Node / APIs</div>
+              <div class="text-xs text-gray-400">70%</div>
+            </div>
+            <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+              <div class="h-2 rounded-full" style="width: 70%; background: linear-gradient(90deg, #06d447, #38f888)"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- skill cards -->
+        <div class="mt-8 grid md:grid-cols-3 gap-4">
+          <div class="bg-gray-600/10 rounded-xl p-6 text-center animate-fadeUp">
+            <div class="text-lg font-medium text-white">Tailwind</div>
+            <p class="text-sm text-gray-300 mt-3">Utility-first CSS for rapid UI.</p>
+          </div>
+          <div class="bg-gray-600/10 rounded-xl p-6 text-center animate-fadeUp">
+            <div class="text-lg font-medium text-white">React</div>
+            <p class="text-sm text-gray-300 mt-3">Component-driven UI & SPA.</p>
+          </div>
+          <div class="bg-gray-600/10 rounded-xl p-6 text-center animate-fadeUp">
+            <div class="text-lg font-medium text-white">Node.js</div>
+            <p class="text-sm text-gray-300 mt-3">Server-side JS & APIs.</p>
+          </div>
+        </div>
+      </section>
+
+      <!--!------------------------ PROJECTS ------------------------!-->
+      <section id="projects" class="mt-12 py-10">
+        <h3 class="text-cyan-600 text-sm">&lt;Projects&gt;</h3>
+        <h2 class="text-3xl text-white font-semibold mt-2">Selected Projects</h2>
+
+        <div class="mt-6 grid md:grid-cols-3 gap-6">
+          <!-- card 1 -->
+          <article class="bg-gray-600/10 rounded-xl p-4 animate-fadeUp">
+            <img src="media/web_abdelmawla.png" alt="project" class="w-full h-40 object-cover rounded-md mb-4" />
+            <h4 class="text-white font-semibold">Project One</h4>
+            <p class="text-gray-300 text-sm mt-2">A short description of the project and tech used.</p>
+            <div class="mt-4 flex gap-3">
+              <a href="#" class="text-sm px-3 py-1 rounded bg-cyan-600 text-black">Live</a>
+              <a href="#" class="text-sm px-3 py-1 rounded border border-white/10">Code</a>
+            </div>
+          </article>
+
+          <!-- card 2 -->
+          <article class="bg-gray-600/10 rounded-xl p-4 animate-fadeUp">
+            <img src="media/web_eslam-portfolio.png" alt="project" class="w-full h-40 object-cover rounded-md mb-4" />
+            <h4 class="text-white font-semibold">Project Two</h4>
+            <p class="text-gray-300 text-sm mt-2">Short summary, scope and tech.</p>
+            <div class="mt-4 flex gap-3">
+              <a href="#" class="text-sm px-3 py-1 rounded bg-cyan-600 text-black">Live</a>
+              <a href="#" class="text-sm px-3 py-1 rounded border border-white/10">Code</a>
+            </div>
+          </article>
+
+          <!-- card 3 -->
+          <article class="bg-gray-600/10 rounded-xl p-4 animate-fadeUp">
+            <img src="media/web_kareem.png" alt="project" class="w-full h-40 object-cover rounded-md mb-4" />
+            <h4 class="text-white font-semibold">Project Three</h4>
+            <p class="text-gray-300 text-sm mt-2">Short summary, scope and tech.</p>
+            <div class="mt-4 flex gap-3">
+              <a href="#" class="text-sm px-3 py-1 rounded bg-cyan-600 text-black">Live</a>
+              <a href="#" class="text-sm px-3 py-1 rounded border border-white/10">Code</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!--!------------------------ CONTACT ------------------------!-->
+      <section id="contact" class="mt-12 pb-20">
+        <h3 class="text-cyan-600 text-sm">&lt;Contact&gt;</h3>
+        <h2 class="text-3xl text-white font-semibold mt-2">Get in touch</h2>
+
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <form id="contactForm" class="bg-gray-600/10 rounded-xl p-6 animate-fadeUp">
+            <label class="text-sm text-gray-400">Name</label>
+            <input required class="w-full mt-2 p-3 rounded bg-transparent border border-white/10 text-white" placeholder="Your name" />
+            <label class="text-sm text-gray-400 mt-4">Email</label>
+            <input required type="email" class="w-full mt-2 p-3 rounded bg-transparent border border-white/10 text-white" placeholder="your@mail.com" />
+            <label class="text-sm text-gray-400 mt-4">Message</label>
+            <textarea required class="w-full mt-2 p-3 rounded bg-transparent border border-white/10 text-white" rows="5" placeholder="Say hi..."></textarea>
+            <button type="submit" class="mt-4 px-4 py-2 rounded bg-cyan-600 text-black font-medium">Send</button>
+          </form>
+
+          <div class="bg-gray-600/10 rounded-xl p-6 animate-fadeUp">
+            <h4 class="text-white font-semibold">Contact Info</h4>
+            <p class="text-gray-300 mt-3">Email: hello@Ahmed Talaat.dev</p>
+            <p class="text-gray-300 mt-1">Location: Egypt</p>
+            <div class="mt-6">
+              <p class="text-gray-400 text-sm">Or reach me on:</p>
+              <div class="flex gap-3 mt-3">
+                <a href="#" class="text-gray-300">GitHub</a>
+                <a href="#" class="text-gray-300">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--!------------------------ FOOTER ------------------------!-->
+      <footer class="text-center flex justify-center items-center gap-1 text-gray-200 py-6">© <span id="year"></span> Ahmed Talaat — Built with <i class="bi-heart text-red-500 hover:text-shadow-sm text-shadow-red-500"></i> from Egypt</footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>
