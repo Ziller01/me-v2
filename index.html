@@ -34,7 +34,7 @@
     <!-- Fonts (مثال: Inter من Google Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/output.css" />
@@ -47,7 +47,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ahmedtalaat.com" />
   </head>
-  <body class="edge-gradient text-gray-200 font-inter">
+  <body class="edge-gradient text-gray-200 fonts-inter">
     <!-- Container -->
     <div class="min-h-screen container mx-auto max-w-7xl flex flex-col gap-24 p-5">
       <!--!------------------------ NAV ------------------------!-->
@@ -73,7 +73,7 @@
       <!--!------------------------ HERO ------------------------!-->
       <header id="home" class="grid lg:grid-cols-2 gap-10 items-center mt-24">
         <div class="flex flex-col gap-5">
-          <p class="text-cyan-600 text-sm font-medium animate-fadeUp">&lt;Welcome to my portfolio&gt;</p>
+          <p class="text-cyan-600 text-lg font-thin animate-fadeUp">&lt;Welcome to my portfolio&gt;</p>
           <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight animate-fadeUp" style="animation-delay: 0.05s">
             I'm <span class="text-cyan-400">Ahmed Talaat</span><br />
             Software Engineer &amp; Fullstack Developer
@@ -102,15 +102,14 @@
             </div>
             <!-- code -->
             <code class="bg-transparent text-[clamp(10px,2vw,16px)] font-mono text-gray-200 flex flex-col gap-0.5">
-              <span class="whitespace-nowrap"><span class="text-green-500">1|</span> <span class="text-cyan-400">const</span> about = {</span>
-              <span class="whitespace-nowrap"><span class="text-green-500">2|</span> &nbsp;&nbsp;<span class="text-cyan-300">name</span>: <span class="text-amber-300">"Ahmed Talaat"</span>,</span>
-              <span class="whitespace-nowrap"><span class="text-green-500">3|</span> &nbsp;&nbsp;<span class="text-cyan-300">roles</span>: [ <span class="text-amber-300">"Software Engineer"</span>, <span class="text-amber-300">"Fullstack"</span>,</span>
-              <span class="whitespace-nowrap"><span class="text-green-500">4|</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-amber-300">"Front-End"</span>, <span class="text-amber-300">"Back-End"</span>, <span class="text-amber-300">"Problem Solver"</span> ],</span>
-              <span class="whitespace-nowrap"><span class="text-green-500">5|</span> &nbsp;&nbsp;<span class="text-cyan-300">stack</span>: [ <span class="text-amber-300">"HTML"</span>, <span class="text-amber-300">"Tailwind"</span>, <span class="text-amber-300">"JS"</span>,</span>
-              <span class="whitespace-nowrap"><span class="text-green-500">6|</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-amber-300">"React"</span>, <span class="text-amber-300">"Node"</span> ]</span>
-              <span class="whitespace-nowrap"><span class="text-green-500">7|</span> };</span>
-              <span class="whitespace-nowrap"><span class="text-green-500">8|</span></span>
-              <span class="whitespace-nowrap"><span class="text-green-500">9|</span> console.<span class="text-cyan-400">log</span>(<span class="text-amber-300">"Hello World"</span>);</span>
+              <span> <span class="text-cyan-400">const</span> about = {</span>
+              <span> &nbsp;&nbsp;<span class="text-cyan-300">name</span>: <span class="text-amber-300">"Ahmed Talaat"</span>,</span>
+              <span> &nbsp;&nbsp;<span class="text-cyan-300">roles</span>: [ <span class="text-amber-300">"Software Engineer"</span>, <span class="text-amber-300">"Fullstack"</span>,</span>
+              <span> &nbsp;&nbsp;<span class="text-cyan-300">stack</span>: [ <span class="text-amber-300">"HTML"</span>, <span class="text-amber-300">"Tailwind"</span>, <span class="text-amber-300">"JS"</span>,</span>
+              <span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-amber-300">"React"</span>, <span class="text-amber-300">"Node"</span> ]</span>
+              <span> };</span>
+              <span></span>
+              <span> console.<span class="text-cyan-400">log</span>(<span class="text-amber-300">"Hello World"</span>);</span>
             </code>
           </div>
           <img src="media/logo2.png" alt="hero preview" class="absolute -right-8 -bottom-8 w-32 h-32 rounded-md rotate-6 shadow-2xl hidden md:block" />
@@ -119,7 +118,7 @@
 
       <!--!------------------------ ABOUT ------------------------!-->
       <section id="about" class="w-full flex flex-col gap-10">
-        <h2 class="text-3xl text-white font-semibold mt-2">&lt;/About Me&gt;</h2>
+        <h2 class="text-3xl text-white font-semibold ms-5">&lt;/About&gt;</h2>
         <div class="grid md:grid-cols-3 gap-6 items-start">
           <div class="md:col-span-2 bg-gray-600/10 rounded-xl p-6 animate-fadeUp">
             <p class="text-gray-300">I'm a motivated developer building modern interfaces and small backend services. I focus on performance, accessibility, and pleasant UX. I enjoy solving problems and turning ideas into production-ready apps.</p>
@@ -140,7 +139,7 @@
 
       <!--!------------------------ SKILLS ------------------------!-->
       <section id="skills" class="w-full flex flex-col gap-10">
-        <h2 class="text-3xl text-white font-semibold mt-2">&lt;/Skills & Proficiencies&gt;</h2>
+        <h2 class="text-3xl text-white font-semibold ms-5">&lt;/Skills&gt;</h2>
 
         <div class="flex flex-col gap-2.5">
           <!-- progress blocks -->
@@ -197,13 +196,13 @@
 
       <!--!------------------------ PROJECTS ------------------------!-->
       <section id="projects" class="w-full flex flex-col gap-10">
-        <h2 class="text-3xl text-white font-semibold mt-2">&lt;/Projects&gt;</h2>
+        <h2 class="text-3xl text-white font-semibold ms-5">&lt;/Projects&gt;</h2>
         <div id="projects-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">Loading...</div>
       </section>
 
       <!--!------------------------ CONTACT ------------------------!-->
       <section id="contact" class="w-full flex flex-col gap-10">
-        <h2 class="text-3xl text-white font-semibold mt-2">&lt;/Get in touch&gt;</h2>
+        <h2 class="text-3xl text-white font-semibold ms-5">&lt;/Contact&gt;</h2>
 
         <div class="grid md:grid-cols-2 gap-6">
           <form id="contactForm" class="bg-gray-600/10 rounded-xl p-6 animate-fadeUp">
