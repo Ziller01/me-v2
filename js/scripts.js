@@ -33,7 +33,6 @@ window.addEventListener("scroll", () => {
                 startVelocity: 50,
                 gravity: 0.8,
                 scalar: 1.2,
-                // colors: ['#73a2fd', '#76db7f', '#e46e6c', '#ffffff'],
                 origin: { y: 0.8 }
             });
             if (Date.now() < end) requestAnimationFrame(frame);
@@ -118,11 +117,6 @@ skills.forEach(s => {
         </div>
     </article>
     `;
-    // <div class="bg-gray-600/10 rounded-xl p-6 text-center animate-fadeUp">
-    //     <div class="text-lg font-medium text-white">Tailwind</div>
-    //     <p class="text-sm text-gray-300 mt-3">Utility-first CSS for rapid UI.</p>
-    // </div>
-
 });
 
 
@@ -173,7 +167,7 @@ const projects = [
         desc: "Discord Bot for Managing Temporary Roles.",
         image: "../media/web_tempbot.png",
         link: "https://www.tempbot.xyz",
-        createDate: '',
+        createDate: '5-2020',
         skills: ["Node.js", "MySQL", "discord.js", "REST API", "HTML", "TailwindCSS", "JS"],
         tags: ["Discord Bot"],
         status: statuses.idle,
@@ -183,7 +177,7 @@ const projects = [
         desc: "My old personal portfolio website.",
         image: "../media/web_ahmedtalaat.png",
         link: "https://Ziller01.github.io/me",
-        createDate: '9-2025',
+        createDate: '10-2024',
         skills: ["HTML", "TailwindCSS", "JS"],
         tags: ["Portfolio"],
         status: statuses.old,
@@ -208,7 +202,7 @@ projects.forEach(p => {
             </div>
 
             <div class="flex gap-3 flex-wrap font-normal text-sm">
-                ${p.tags.map(m => `<span class="px-1 border border-cyan-500/10 rounded-sm bg-cyan-500/10 text-cyan-500">${m}</span>`).join("\n")}
+                ${p.tags.map(m => `<span class="px-2 border border-cyan-500/10 rounded-full bg-cyan-500/10 text-cyan-500">${m}</span>`).join("\n")}
             </div>
         </div>
 
