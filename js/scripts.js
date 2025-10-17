@@ -17,41 +17,28 @@ function togglePhoneList() {
 
 // ! >>==================================>> Effects
 
-const lastSection = document.querySelector("#contact"); // ضع ID آخر قسم عندك
+const contactSection = document.querySelector("#contact");
+const heart = confetti.shapeFromPath({ path: 'M10 30 A20 20 0 0 1 50 30 A20 20 0 0 1 90 30 Q90 60 50 90 Q10 60 10 30Z' });
 let fired = false;
 
 window.addEventListener("scroll", () => {
-    const rect = lastSection.getBoundingClientRect();
+    const rect = contactSection.getBoundingClientRect();
     if (!fired && rect.top < window.innerHeight * 0.8) {
-        fired = true;
-        const settings = {
-            count: 150,
-            spread: 100,
-            velocity: 50,
-            decay: 0.9,
-            gravity: 1,
-            colors: ['#73a2fd', '#76db7f', '#e46e6c', '#ffffff'],
-        };
-
-        const heart = confetti.shapeFromPath({
-            path: 'M10 30 A20 20 0 0 1 50 30 A20 20 0 0 1 90 30 Q90 60 50 90 Q10 60 10 30Z'
-        });
-
-
-        confetti({
-            particleCount: settings.count,
-            spread: settings.spread,
-            startVelocity: settings.velocity,
-            decay: settings.decay,
-            gravity: settings.gravity,
-            colors: settings.colors,
-            shapes: [heart],
-            scalar: 1.2,
-            origin: { y: 0.8 }
-        });
-
-    }
-    else if (fired && rect.top > window.innerHeight * 0.8) { fired = false }
+        const end = Date.now() + 500; fired = true;
+        function frame() {
+            confetti({
+                shapes: [heart],
+                particleCount: 15,
+                spread: 120,
+                startVelocity: 50,
+                gravity: 0.8,
+                scalar: 1.2,
+                // colors: ['#73a2fd', '#76db7f', '#e46e6c', '#ffffff'],
+                origin: { y: 0.8 }
+            });
+            if (Date.now() < end) requestAnimationFrame(frame);
+        }; frame();
+    } else if (fired && rect.top > window.innerHeight * 0.8) fired = false;
 });
 
 // ! >>==================================>> Animations
@@ -142,18 +129,18 @@ skills.forEach(s => {
 // ! >>==================================>> Dynamic Projects
 
 const statuses = {
-    completed: { name: "COMPLETED", color: "bg-green-500/20 text-green-400", cardColor: "bg-green-500/5 border-green-500/10" },
-    beta: { name: "BETA", color: "bg-lime-500/20 text-lime-400", cardColor: "bg-lime-500/5 border-lime-500/10" },
-    inProgress: { name: "IN PROGRESS", color: "bg-yellow-500/20 text-yellow-400", cardColor: "bg-yellow-500/5 border-yellow-500/10" },
+    completed: { name: "Completed", color: "bg-green-500/20 text-green-400", cardColor: "bg-green-500/5 border-green-500/10" },
+    beta: { name: "Beta", color: "bg-lime-500/20 text-lime-400", cardColor: "bg-lime-500/5 border-lime-500/10" },
+    inProgress: { name: "In Progress", color: "bg-yellow-500/20 text-yellow-400", cardColor: "bg-yellow-500/5 border-yellow-500/10" },
     idle: { name: "IDLE", color: "bg-gray-500/20 text-gray-400", cardColor: "bg-gray-500/5 border-gray-500/10" },
-    old: { name: "OLD Verion", color: "bg-gray-500/20 text-gray-400", cardColor: "bg-gray-500/5 border-gray-500/10" },
-    canceled: { name: "CANCELLED", color: "bg-red-500/20 text-red-400", cardColor: "bg-red-500/5 border-red-500/10" },
+    old: { name: "Old Version", color: "bg-gray-500/20 text-gray-400", cardColor: "bg-gray-500/5 border-gray-500/10" },
+    canceled: { name: "Canceled", color: "bg-red-500/20 text-red-400", cardColor: "bg-red-500/5 border-red-500/10" },
 }
 
 const projects = [
     {
         name: "Prime Dental Clinic",
-        desc: "Three.js experiment.",
+        desc: "Dental clinic website.",
         image: "../media/web_primedentalclinic.png",
         link: "https://primedentalclinic.net/",
         createDate: '11-2024',
@@ -162,18 +149,8 @@ const projects = [
         status: statuses.completed,
     },
     {
-        name: "Eslam Portfolio",
-        desc: "Three.js experiment.",
-        image: "../media/web_eslam-portfolio.png",
-        link: "https://dreslamnubi.com/",
-        createDate: '5-2025',
-        skills: ["HTML", "TailwindCSS", "JS"],
-        tags: ["Portfolio"],
-        status: statuses.completed,
-    },
-    {
         name: "Abdelmawla Portfolio",
-        desc: "Personal site built with Tailwind.",
+        desc: "Personal website for Media Buyer.",
         image: "../media/web_abdelmawla.png",
         link: "https://abdelmawla.site/",
         createDate: '9-2025',
@@ -183,7 +160,7 @@ const projects = [
     },
     {
         name: "Kareem Portfolio",
-        desc: "Interactive AI admin panel.",
+        desc: "Personal website.",
         image: "../media/web_kareem.png",
         link: "https://xrk111.github.io/kareem/",
         createDate: '9-2025',
@@ -193,7 +170,7 @@ const projects = [
     },
     {
         name: "TempBot",
-        desc: "Discord bot for managing temproles.",
+        desc: "Discord Bot for Managing Temporary Roles.",
         image: "../media/web_tempbot.png",
         link: "https://www.tempbot.xyz",
         createDate: '',
@@ -203,7 +180,7 @@ const projects = [
     },
     {
         name: "Ahmed Talaat Portfolio",
-        desc: "My old personal portfolio.",
+        desc: "My old personal portfolio website.",
         image: "../media/web_ahmedtalaat.png",
         link: "https://Ziller01.github.io/me",
         createDate: '9-2025',
@@ -218,15 +195,20 @@ projects_container.innerHTML = ""
 
 projects.forEach(p => {
     projects_container.innerHTML += `
-    <article class="bg-gray-500/10 rounded-xl p-5 flex flex-col gap-5 animate-fadeUp border border-white/10">
+    <article class="bg-cyan-500/5 rounded-xl p-5 flex flex-col gap-5 animate-fadeUp border border-white/10">
         <img src="${p.image}" alt="project" class="w-full aspect-video object-cover object-top rounded-md" />
 
         <div class="flex flex-col gap-1">
             <h4 class="font-semibold text-xl text-white">${p.name}</h4>
             <p class="font-normal text-sm text-gray-300">${p.desc}</p>
-            <div class="flex gap-3 flex-wrap font-medium text-sm">
+
+            <div class="flex gap-3 flex-wrap text-sm font-normal">
                 ${p.skills.slice(0, 3).map(m => `<span class="text-gray-500/80">${m}</span>`).join("\n")}
                 ${p.skills.length > 3 ? `<span class="cursor-pointer group text-gray-600/80" data-dropdown="${p.skills.slice(3)}">+${p.skills.length - 3} more</span>` : ""}
+            </div>
+
+            <div class="flex gap-3 flex-wrap font-normal text-sm">
+                ${p.tags.map(m => `<span class="px-1 border border-cyan-500/10 rounded-sm bg-cyan-500/10 text-cyan-500">${m}</span>`).join("\n")}
             </div>
         </div>
 
@@ -247,7 +229,7 @@ document.querySelectorAll("[data-dropdown]").forEach(el => {
     if (!items) return;
     const wrapper = document.createElement("div");
     wrapper.innerHTML = `
-        <div class="absolute hidden z-10 group-hover:flex gap-1 -translate-x-10 bg-black/20 backdrop-blur-sm text-white/70 font-light text-sm border border-white/10 rounded-md shadow-lg overflow-hidden">
+        <div class="cursor-default absolute hidden z-10 group-hover:flex flex-col justify-center items-center gap-1 0-translate-x-full bg-gray-950/80 backdrop-blur-sm text-gray-400/80 font-light text-sm border border-white/10 rounded-md shadow-lg overflow-hidden">
             ${items.map(i => `<p class="whitespace-nowrap px-2 py-1">${i}</p>`).join("")}
         </div>
     `;
