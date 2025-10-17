@@ -176,7 +176,7 @@ const projects = [
         name: "Ahmed Talaat Portfolio",
         desc: "My old personal portfolio website.",
         image: "../media/web_ahmedtalaat.png",
-        link: "https://Ziller01.github.io/me",
+        link: "https://Ziller01.github.io/me-v1",
         createDate: '10-2024',
         skills: ["HTML", "TailwindCSS", "JS"],
         tags: ["Portfolio"],
