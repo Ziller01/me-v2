@@ -13,6 +13,12 @@ window.addEventListener("scroll", () => {
 function togglePhoneList() {
     const menuPhone = document.getElementById("menuPhone");
     menuPhone && menuPhone.classList.toggle("hidden")
+    const body = document.querySelector("body");
+    if (menuPhone.classList.contains("hidden")) {
+        body.style.overflow = "auto";
+    } else {
+        body.style.overflow = "hidden";
+    }
 }
 
 // ! >>==================================>> Effects
