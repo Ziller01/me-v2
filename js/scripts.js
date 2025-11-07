@@ -72,37 +72,37 @@ document.querySelectorAll(".animate-fadeUp").forEach(el => {
 const skills = [
     {
         name: "HTML",
-        persent: "80",
+        persent: "75",
         color: "bg-orange-500",
         bgColor: "bg-orange-500/10 border-orange-500/10",
     },
     {
         name: "TailwindCSS",
-        persent: "85",
+        persent: "80",
         color: "bg-sky-600",
         bgColor: "bg-sky-600/10 border-sky-600/10",
     },
     {
         name: "JavaScript",
-        persent: "90",
+        persent: "70",
         color: "bg-yellow-500",
         bgColor: "bg-yellow-500/10 border-yellow-500/10",
     },
     {
         name: "React",
-        persent: "80",
+        persent: "65",
         color: "bg-sky-400",
         bgColor: "bg-sky-400/10 border-sky-400/10",
     },
     {
         name: "Next.js",
-        persent: "75",
+        persent: "60",
         color: "bg-gray-500",
         bgColor: "bg-gray-500/10 border-gray-500/10",
     },
     {
         name: "NodeJS",
-        persent: "95",
+        persent: "75",
         color: "bg-green-600",
         bgColor: "bg-green-600/10 border-green-600/10",
     },
