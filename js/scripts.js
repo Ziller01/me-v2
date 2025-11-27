@@ -139,6 +139,16 @@ const statuses = {
 
 const projects = [
     {
+        name: "Abdallh Alsagaf",
+        desc: "Animated Personal Portfolio.",
+        image: "../media/web_abdallh-alsggaf.png",
+        link: "https://ziller01.github.io/Abdallh",
+        createDate: '11-2025',
+        skills: ["HTML", "TailwindCSS", "JS", "GSAP", "Canvas"],
+        tags: ["Portfolio", "Animated"],
+        status: statuses.completed,
+    },
+    {
         name: "Prime Dental Clinic",
         desc: "Dental clinic website.",
         image: "../media/web_primedentalclinic.png",
@@ -166,7 +176,7 @@ const projects = [
         createDate: '9-2025',
         skills: ["HTML", "TailwindCSS", "JS"],
         tags: ["Portfolio"],
-        status: statuses.inProgress,
+        status: statuses.completed,
     },
     {
         name: "TempBot",
@@ -194,6 +204,8 @@ const projects_container = document.getElementById("projects-container");
 projects_container.innerHTML = ""
 
 projects.forEach(p => {
+    const [month, year] = p.createDate.split('-');
+    const createDate = new Date(year, month - 1);
     projects_container.innerHTML += `
     <article class="bg-cyan-500/5 rounded-xl p-5 flex flex-col gap-5 animate-fadeUp border border-white/10">
         <img src="${p.image}" alt="project" class="w-full aspect-video object-cover object-top rounded-md" />
@@ -211,11 +223,13 @@ projects.forEach(p => {
                 ${p.tags.map(m => `<span class="px-2 border border-cyan-500/10 rounded-full bg-cyan-500/10 text-cyan-500">${m}</span>`).join("\n")}
             </div>
         </div>
-
         
-        <div class="flex justify-between gap-3">
-            <span class="w-fit text-sm px-2 py-1 font-light rounded-full uppercase ${p.status.color}">${p.status.name}</span>
-            <a href="${p.link}" target="_blank" class="text-sm px-3 py-1 bg-cyan-400/70 border border-cyan-400/50 hover:bg-cyan-400 hover:shadow-all-md shadow-cyan-400 text-black flex gap-3 rounded-full duration-100"><i class="bi bi-box-arrow-up-right"></i> Go Live</a>
+        <div class="flex items-center justify-between gap-3">
+            <div class="flex items-center gap-1">
+                <span class="w-fit text-sm px-2 py-1 font-light rounded-full uppercase ${p.status.color}">${p.status.name}</span>
+                <span class="text-xs text-gray-500 leading-none">${createDate.getUTCFullYear()} ${createDate.toLocaleString("en-US", { month: "short" })}</span>
+            </div>
+            <a href="${p.link}" target="_blank" class="text-sm px-3 py-1 bg-cyan-400/70 border border-cyan-400/50 hover:bg-cyan-400 hover:shadow-all-md shadow-cyan-400 text-black flex gap-2 rounded-full duration-100">Go Live <i class="bi bi-box-arrow-up-right"></i></a>
         </div>
     </article>
     `;
